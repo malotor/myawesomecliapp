@@ -1,0 +1,16 @@
+{
+    "name": "manel/myawesomecliapp",
+    "description": "My Awesome CLI Application",
+    "require": {
+        "symfony/console": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Manel",
+            "email": "malotor@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"malotor\\MyAwesomeCliApp\\": "src"}
+    }
+}
