@@ -14,7 +14,7 @@
     }
   ],
   "git-version": "package_version",
-  "main": "bin/cliph",
-  "output": "cliph.phar",
+  "main": "bin/myawesomecliapp",
+  "output": "myawesomecliapp.phar",
   "stub": true
 }

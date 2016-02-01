@@ -6,6 +6,14 @@ composer install
 chmod 775 bin/myawesomecliapp
 ´´´´
 
+php.ini
+phar.readonly = false
+
+
 ## Commands
 bin/myawesomecliapp --version
 bin/myawesomecliapp hello  
+
+## Box
+box build 
+

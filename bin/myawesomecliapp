@@ -3,9 +3,9 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use malotor\MyAwesomeCliApp\Command;
+use MyAwesomeCliApp\Command;
 use Symfony\Component\Console\Application;
 
-$application = new Application('MyAwesomeApp', '0.1-dev');
+$application = new Application('MyAwesomeApp', '@package_version@');
 $application->add(new Command\HelloCommand());
 $application->run();
