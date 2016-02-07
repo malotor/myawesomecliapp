@@ -2,7 +2,8 @@
     "name": "manel/myawesomecliapp",
     "description": "My Awesome CLI Application",
     "require": {
-        "symfony/console": "^3.0"
+        "symfony/console": "^3.0",
+        "herrera-io/phar-update": "^2.0"
     },
     "authors": [
         {
