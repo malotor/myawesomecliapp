@@ -17,3 +17,8 @@ bin/myawesomecliapp hello
 ## Box
 box build 
 
+
+## References
+
+vhttps://moquet.net/blog/distributing-php-cl
+
