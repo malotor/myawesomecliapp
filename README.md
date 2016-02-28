@@ -20,5 +20,5 @@ box build
 
 ## References
 
-vhttps://moquet.net/blog/distributing-php-cl
-
+https://moquet.net/blog/distributing-php-cl
+https://github.com/kherge-abandoned/php-phar-update

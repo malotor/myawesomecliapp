@@ -23,9 +23,9 @@ CURRENT_VERSION=`cat VERSION`
 NEW_VERSION="$1"
 DATE=`date +"%Y-%m-%d"`
 
-if ! git show-ref --tags | egrep -q "refs/tags/v${CURRENT_VERSION}$"
+if ! git show-ref --tags | egrep -q "refs/tags/${CURRENT_VERSION}$"
 then
-    echo "Current version tag v${CURRENT_VERSION} not found"
+    echo "Current version tag '${CURRENT_VERSION}' not found"
     exit 1
 fi
 
@@ -34,7 +34,7 @@ echo "New version : $NEW_VERSION"
 
 echo "v$NEW_VERSION ($DATE)" > tmpfile
 echo "-------------------" >> tmpfile
-git log --no-merges --pretty=format:" * %s" "v$CURRENT_VERSION"...HEAD >> tmpfile
+git log --no-merges --pretty=format:" * %s" "$CURRENT_VERSION"...HEAD >> tmpfile
 echo "" >> tmpfile
 echo "" >> tmpfile
 cat CHANGELOG >> tmpfile
