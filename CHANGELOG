@@ -1,3 +1,9 @@
+v1.4.0 (2016-02-28)
+-------------------
+ * Added --no-merges to git log statement in bump_version.sh
+ * Check that current version tag exists added to bump_version.sh
+ * add user confirmation to bump_version script
+
 v1.3.0 (2016-02-28)
 -------------------
  * Merge branch 'develop-1.3.0'
