@@ -3,3 +3,4 @@ vendor/
 .idea/
 myawesomecliapp.phar
 box.phar
+tmpfile
