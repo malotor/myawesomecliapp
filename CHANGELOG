@@ -1,3 +1,7 @@
+v1.5.0 (2016-02-28)
+-------------------
+ * remove 'v' from version tag. Update bump-version.sh and created close-version.sh
+
 v1.4.0 (2016-02-28)
 -------------------
  * Added --no-merges to git log statement in bump_version.sh
