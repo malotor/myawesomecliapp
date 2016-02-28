@@ -1,6 +1,6 @@
 <?php
 
-namespace MyAwesomeCliApp\command;
+namespace MyAwesomeCliApp\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Herrera\Phar\Update\Manager;
 use Herrera\Phar\Update\Manifest;
 
-class UpdateCommand extends Commad
+class UpdateCommand extends Command
 {
     const MANIFEST_FILE = 'http://malotor.github.io/myawesomecliapp/manifest.json';
 
