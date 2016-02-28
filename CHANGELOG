@@ -1,3 +1,7 @@
+v1.5.2 (2016-02-28)
+-------------------
+ * Fix create_phar typo error
+
 v1.5.1 (2016-02-28)
 -------------------
  * Fix close_version.sh
