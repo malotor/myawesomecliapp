@@ -25,12 +25,28 @@ DATE=`date +"%Y-%m-%d"`
 
 echo "Current version : $CURRENT_VERSION"
 echo "New version : $NEW_VERSION"
-echo "Will set new version to be $NEW_VERSION"
-echo $NEW_VERSION > VERSION
+
 echo "v$NEW_VERSION ($DATE)" > tmpfile
 echo "-------------------" >> tmpfile
 git log --pretty=format:" * %s" "v$CURRENT_VERSION"...HEAD >> tmpfile
 echo "" >> tmpfile
 echo "" >> tmpfile
 cat CHANGELOG >> tmpfile
-mv tmpfile CHANGELOG
+
+echo "CHANGELOG:"
+more tmpfile
+
+read -p "Do you want to continue? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "VERSION set to $NEW_VERSION"
+    echo $NEW_VERSION > VERSION
+    mv tmpfile CHANGELOG
+    echo "CHANGELOG updated!"
+    git add VERSION CHANGELOG
+    git commit -m "VERSION ${NEW_VERSION}"
+    echo "Commit created!"
+fi
+
+rm -f tmpfile
