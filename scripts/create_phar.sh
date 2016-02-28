@@ -7,6 +7,15 @@ REPO_URL="https://malotor.github.io/myawesomecliapp/downloads"
 CURRENT_VERSION=`cat VERSION`
 PHAR_FILE="${PHAR_NAME}.phar"
 
+
+# Go to version tag
+if ! git show-ref --tags | egrep -q "refs/tags/${CURRENT_VERSION}$"
+then
+    echo "Current version tag '${CURRENT_VERSION}' not found"
+    exit 1
+fi
+git checkout $CURRENT_VERSION
+
 # Build phar file
 ./box.phar build
 # Calculate the hash
