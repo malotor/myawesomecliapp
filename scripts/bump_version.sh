@@ -34,7 +34,7 @@ echo "New version : $NEW_VERSION"
 
 echo "v$NEW_VERSION ($DATE)" > tmpfile
 echo "-------------------" >> tmpfile
-git log --pretty=format:" * %s" "v$CURRENT_VERSION"...HEAD >> tmpfile
+git log --no-merges --pretty=format:" * %s" "v$CURRENT_VERSION"...HEAD >> tmpfile
 echo "" >> tmpfile
 echo "" >> tmpfile
 cat CHANGELOG >> tmpfile
