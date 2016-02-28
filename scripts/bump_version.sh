@@ -23,6 +23,12 @@ CURRENT_VERSION=`cat VERSION`
 NEW_VERSION="$1"
 DATE=`date +"%Y-%m-%d"`
 
+if ! git show-ref --tags | egrep -q "refs/tags/v${CURRENT_VERSION}$"
+then
+    echo "Current version tag v${CURRENT_VERSION} not found"
+    exit 1
+fi
+
 echo "Current version : $CURRENT_VERSION"
 echo "New version : $NEW_VERSION"
 
