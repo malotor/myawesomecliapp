@@ -1,5 +1,5 @@
 #!/bin/sh
-pwd
+
 if [ -z "$1" ]
   then
     echo "No new version are provided"
@@ -25,8 +25,6 @@ DATE=`date +"%Y-%m-%d"`
 
 echo "Current version : $CURRENT_VERSION"
 echo "New version : $NEW_VERSION"
-
-
 echo "Will set new version to be $NEW_VERSION"
 echo $NEW_VERSION > VERSION
 echo "v$NEW_VERSION ($DATE)" > tmpfile
@@ -36,4 +34,3 @@ echo "" >> tmpfile
 echo "" >> tmpfile
 cat CHANGELOG >> tmpfile
 mv tmpfile CHANGELOG
-#git add CHANGELOG VERSION
