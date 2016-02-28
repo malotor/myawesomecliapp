@@ -2,7 +2,7 @@
 
 PHAR_NAME="myawesomecliapp"
 DESTINATION_PATH="/Users/manel/Projects/github_pages/malotor.github.io/myawesomecliapp"
-REPO_URL="http://mattketmo.github.io/myawesomecliapp/downloads"
+REPO_URL="https://malotor.github.io/myawesomecliapp/downloads"
 
 CURRENT_VERSION=`cat VERSION`
 PHAR_FILE="${PHAR_NAME}.phar"
