@@ -22,3 +22,4 @@ box build
 
 https://moquet.net/blog/distributing-php-cl
 https://github.com/kherge-abandoned/php-phar-update
+https://mwop.net/blog/2015-12-14-secure-phar-automation.html
